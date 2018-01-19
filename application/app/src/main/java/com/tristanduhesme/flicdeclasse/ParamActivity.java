@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
-import android.os.AsyncTask;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
@@ -13,19 +12,17 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.SimpleTimeZone;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 
 
@@ -64,10 +61,10 @@ public class ParamActivity extends Activity {
         }
 
     }
-    public String url = "192.168.250.101:8888/index.py";
+    public String url = "www.google.com";//"192.168.250.101:8888/index.py";
     private String connectionALaBaseDeDonnee() throws IOException {
         Log.i("[INFO]","Connexion à la BDD");
-        String url = "192.168.250.101:8888/index.py";
+        //String url = "192.168.250.101:8888/index.py";
 
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()

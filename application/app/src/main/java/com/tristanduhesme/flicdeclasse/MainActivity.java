@@ -3,10 +3,9 @@ package com.tristanduhesme.flicdeclasse;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -34,14 +33,15 @@ public class MainActivity extends AppCompatActivity {
         //maZoneDeTexte = findViewById(R.id.);
         //maZoneDeTexte.setText(zePhrase);
     }
-    private OnClickListener addListener = new OnClickListener() {
+
+    private View.OnClickListener addListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(MainActivity.this, AddActivity.class);
+            Intent intent = new Intent(MainActivity.this, TestInternet.class);
             startActivity(intent);
         }
     };
-    private OnClickListener paramsListener = new OnClickListener() {
+    private View.OnClickListener paramsListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainActivity.this, ParamActivity.class);
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             Log.i("[DEBUG]","startActivity");
         }
     };
-    private OnClickListener showHistorique = new OnClickListener() {
+    private View.OnClickListener showHistorique = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainActivity.this, ListHistoryActivity.class);
