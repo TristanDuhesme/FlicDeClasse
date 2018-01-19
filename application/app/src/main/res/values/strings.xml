@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Flic de Classe</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcomeMessage">Vous etes le Grand Administrateur des flics de classe. Bravo !</string>
+    <string name="historique">Historique</string>
+    <string name="addNewFace">Ajouter une nouvelle personne dans la base</string>
+    <string name="paramAlarms">Parametrer les horaires du cours</string>
+    <string name="valider">Valider</string>
+    <string name="timeFormat">%d:%d</string>
+</resources>
