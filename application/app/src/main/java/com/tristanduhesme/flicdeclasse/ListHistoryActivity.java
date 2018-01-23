@@ -23,18 +23,18 @@ public class ListHistoryActivity extends Activity {
         setContentView(R.layout.activity_liste_historique);
         vue = (ListView) findViewById(R.id.listHistory);
         Personne[] clum = new Personne[]{
-                new Personne("André","Bonnelle", "QuartCLUM", R.drawable.andre),
-                new Personne("Quentin", "Fréminet","QuartCLUM",R.drawable.quentin),
-                new Personne("Rémi", "du Chalard", "QuartCLUM",R.drawable.remi),
-                new Personne("Tristan", "Duhesme","QuartCLUM",R.drawable.tristan),
-                new Personne("Jean-Baptiste", "Gaillot","Clumier",R.drawable.jb),
-                new Personne("Frédérik", "de Moucheron","Clumier",R.drawable.frederik),
-                new Personne("Sosthène", "d\'Hauthuille","Clumier",R.drawable.sosthene),
-                new Personne("Jean", "Huré","Clumier",R.drawable.unknown),
-                new Personne("Aymeric", "Doussau","Clumier",R.drawable.aymeric),
-                new Personne("Thomas", "Jourdain","Clumier",R.drawable.thomas),
-                new Personne("Jean-Vianney", "Turquan","Clumier",R.drawable.jv),
-                new Personne("Amaury", "Duhesme", "Clumier",R.drawable.amaury)
+                new Personne("André","Bonnelle", "12/01/2018 8:30", R.drawable.andre),
+                new Personne("Quentin", "Fréminet","12/01/2018 8:23",R.drawable.quentin),
+                new Personne("Rémi", "du Chalard", "12/01/2018 8:29",R.drawable.remi),
+                new Personne("Tristan", "Duhesme","12/01/2018 18:30",R.drawable.tristan),
+                new Personne("Jean-Baptiste", "Gaillot","12/01/2018 10:00",R.drawable.jb),
+                new Personne("Frédérik", "de Moucheron","12/01/2018 8:30",R.drawable.frederik),
+                new Personne("Sosthène", "d\'Hauthuille","12/01/2018 8:30",R.drawable.sosthene),
+                new Personne("Jean", "Huré","12/01/2018 8:30",R.drawable.unknown),
+                new Personne("Aymeric", "Doussau","12/01/2018 8:30",R.drawable.aymeric),
+                new Personne("Thomas", "Jourdain","12/01/2018 8:30",R.drawable.thomas),
+                new Personne("Jean-Vianney", "Turquan","12/01/2018 8:30",R.drawable.jv),
+                new Personne("Amaury", "Duhesme", "12/01/2018 8:30",R.drawable.amaury)
         };
 
     /*

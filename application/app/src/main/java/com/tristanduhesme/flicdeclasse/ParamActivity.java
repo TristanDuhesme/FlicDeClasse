@@ -5,24 +5,16 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.text.InputType;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.SimpleTimeZone;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 
 
@@ -53,54 +45,6 @@ public class ParamActivity extends Activity {
 
         setDateTimeField();
         setHourField();
-
-        try {
-            run();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-    public String url = "www.google.com";//"192.168.250.101:8888/index.py";
-    private String connectionALaBaseDeDonnee() throws IOException {
-        Log.i("[INFO]","Connexion à la BDD");
-        //String url = "192.168.250.101:8888/index.py";
-
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-            .url(url)
-            .build();
-        Response response = client.newCall(request).execute();
-        return response.body().string();
-    }
-
-    void run() throws IOException {
-        OkHttpClient client = new OkHttpClient();
-
-        Request request = new Request.Builder()
-                .url(url)
-                .build();
-
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                call.cancel();
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-                final String myResponse = response.body().string();
-
-                ParamActivity.this.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Log.i("Test",myResponse);
-                    }
-                });
-
-            }
-        });
     }
     private void findViewsById() {
         dateEditText = (EditText) findViewById(R.id.dateEditText);
